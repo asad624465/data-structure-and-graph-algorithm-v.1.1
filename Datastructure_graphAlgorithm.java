@@ -76,26 +76,24 @@ public class Datastructure_graphAlgorithm {
     }
     public static void graphAlgorithm(){
         GraphAlgorithm gh = new GraphAlgorithm(4);
+        TopologicalShort ght = new TopologicalShort(6); 
         Scanner input = new Scanner(System.in);
         System.out.println("---------------------------------------\n"
         +"* Graph Algorithm *\n"
         +"--------------------------------------\n"
-        +"    1.  Graph Representaion\n"
-        +"    2.  BFS\n"
-        +"    3.  DFS\n"
-        +"    4.  Topological Sort\n"
-        +"    5.  Krushkal\n"
-        +"    6.  Prim's\n"
-        +"    7.  Dijkastra\n"
-        +"    8.  Bellman-Ford\n"
-        +"    9.  Floyed-Warshall\n");
+        +"    1.  BFS\n"
+        +"    2.  DFS\n"
+        +"    3.  Topological Sort\n"
+        +"    4.  Krushkal\n"
+        +"    5.  Prim's\n"
+        +"    6.  Dijkastra\n"
+        +"    7.  Bellman-Ford\n"
+        +"    8.  Floyed-Warshall\n");
         System.out.println();	
         System.out.print("Type your Graph Algorithm choice >: ");
         int n2 = input.nextInt();
         switch(n2) {
             case 1:
-                    break;
-            case 2:
                 gh.addEdge(0, 1);
                 gh.addEdge(0, 2);
                 gh.addEdge(1, 2);
@@ -103,14 +101,25 @@ public class Datastructure_graphAlgorithm {
                 gh.addEdge(2, 3);
                 gh.addEdge(3, 3);
                 gh.BFS(2);
-                break;
-            case 3:
+                break; 
+            case 2:
                 gh.addEdge(0, 1);
                 gh.addEdge(0, 2);
                 gh.addEdge(1, 2);
                 gh.addEdge(2, 3);
                 System.out.println("Start here DFS code");
                 gh.DFS(2);
+                break;
+            case 3:
+                ght.addEdge(5, 2); 
+                ght.addEdge(5, 0); 
+                ght.addEdge(4, 0); 
+                ght.addEdge(4, 1); 
+                ght.addEdge(2, 3); 
+                ght.addEdge(3, 1); 
+                System.out.println("Following is a Topological " + 
+                                   "sort of the given graph"); 
+                ght.topologicalSort(); 
                 break;
             case 4:
                     break;
